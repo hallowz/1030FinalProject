@@ -8,10 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Core\" />
     <Folder Include="Fonts\" />
     <Folder Include="Images\" />
-    <Folder Include="MVVM\" />
+    <Folder Include="MVVM\Model\" />
+    <Folder Include="Theme\" />
   </ItemGroup>
 
 </Project>

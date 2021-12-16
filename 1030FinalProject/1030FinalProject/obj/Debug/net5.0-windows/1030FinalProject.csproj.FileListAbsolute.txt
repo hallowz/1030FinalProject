@@ -20,3 +20,7 @@ E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\D
 E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\ref\1030FinalProject.dll
 E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\1030FinalProject.pdb
 E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\1030FinalProject.genruntimeconfig.cache
+E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\MVVM\View\HomeView.g.cs
+E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\App.baml
+E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\MVVM\View\HomeView.baml

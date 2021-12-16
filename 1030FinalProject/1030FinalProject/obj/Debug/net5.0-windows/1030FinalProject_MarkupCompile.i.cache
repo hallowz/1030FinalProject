@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\App.xaml
-11407045341
+21489940669
 
-7-1774940914
+101114429342
 193-1891726104
-MainWindow.xaml;
+MainWindow.xaml;MVVM\View\HomeView.xaml;
 
-False
+True
 
