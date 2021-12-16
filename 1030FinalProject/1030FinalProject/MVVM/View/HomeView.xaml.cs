@@ -24,5 +24,10 @@ namespace _1030FinalProject.MVVM.View
         {
             InitializeComponent();
         }
+
+        private void RadioButton_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

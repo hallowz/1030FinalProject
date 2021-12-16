@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\App.xaml
-21489940669
+4-1713384943
 
-101114429342
+24-470173623
 193-1891726104
-MainWindow.xaml;MVVM\View\HomeView.xaml;
+MainWindow.xaml;MVVM\View\HomeView.xaml;Theme\InventorySlotTheme.xaml;Theme\MenuButtonTheme.xaml;
 
-True
+False
 

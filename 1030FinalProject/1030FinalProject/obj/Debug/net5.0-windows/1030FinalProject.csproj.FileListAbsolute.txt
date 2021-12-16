@@ -24,3 +24,5 @@ E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\D
 E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
 E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\App.baml
 E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\MVVM\View\HomeView.baml
+E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\Theme\MenuButtonTheme.baml
+E:\Programs\My Programs\1030FinalProject\1030FinalProject\1030FinalProject\obj\Debug\net5.0-windows\Theme\InventorySlotTheme.baml

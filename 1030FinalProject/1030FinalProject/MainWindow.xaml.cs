@@ -23,6 +23,21 @@ namespace _1030FinalProject
         public MainWindow()
         {
             InitializeComponent();
+            MouseDown += Window_MouseDown;
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+        public void Minimize(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        public void Exit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

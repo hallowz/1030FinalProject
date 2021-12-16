@@ -10,8 +10,8 @@
   <ItemGroup>
     <Folder Include="Fonts\" />
     <Folder Include="Images\" />
+    <Folder Include="InventorySystem\Equipment\" />
     <Folder Include="MVVM\Model\" />
-    <Folder Include="Theme\" />
   </ItemGroup>
 
 </Project>
