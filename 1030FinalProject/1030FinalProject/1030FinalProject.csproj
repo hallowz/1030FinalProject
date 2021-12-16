@@ -7,4 +7,11 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Fonts\" />
+    <Folder Include="Images\" />
+    <Folder Include="MVVM\" />
+  </ItemGroup>
+
 </Project>
