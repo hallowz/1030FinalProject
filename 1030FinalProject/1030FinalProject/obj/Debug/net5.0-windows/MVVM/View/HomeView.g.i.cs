@@ -54,7 +54,7 @@ namespace _1030FinalProject.MVVM.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/1030FinalProject;component/mvvm/view/homeview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/1030FinalProject;V1.0.0.0;component/mvvm/view/homeview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\MVVM\View\HomeView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

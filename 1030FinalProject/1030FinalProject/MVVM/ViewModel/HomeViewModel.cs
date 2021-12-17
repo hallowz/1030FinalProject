@@ -12,8 +12,11 @@ using _1030FinalProject.InventorySystem.Weapons.RangedWeapons;
 
 namespace _1030FinalProject.MVVM.ViewModel
 {
+    //Code associated with the Home view 
+    //Most of the functionality revolves around this file. 
     class HomeViewModel : ObservableObject
     {
+        //Commands for buttons to use when they are clicked
         public RelayCommand AddHandgunButton { get; set; }
         public RelayCommand AddSmallBulletButton { get; set; }
         public RelayCommand AddSwordButton { get; set; }
@@ -26,6 +29,7 @@ namespace _1030FinalProject.MVVM.ViewModel
         public RelayCommand RemoveItemButton { get; set; }
         public RelayCommand RemoveAllItemButton { get; set; }
 
+        //Holds an instance of Inventory
         private Inventory _inventory;
         public Inventory Inventory
         {
@@ -33,6 +37,8 @@ namespace _1030FinalProject.MVVM.ViewModel
             set
             {
                 _inventory = value;
+
+                //Whenever the Inventory is set to a new value, a list is populated with strings containing the names and amounts contained in each slot
                 int i = 0;
                 foreach (Slot s in Inventory.Slots)
                 {
@@ -46,6 +52,8 @@ namespace _1030FinalProject.MVVM.ViewModel
                     }
                     i++;
                 }
+
+                //The sixth item in the Slot list is used for the weapon slot 
                 if(Inventory.WeaponSlot.Item != null)
                 {
                     Slots[5] = "" + Inventory.WeaponSlot.Item.ItemName;
@@ -54,11 +62,14 @@ namespace _1030FinalProject.MVVM.ViewModel
                 {
                     Slots[5] = "Nothing";
                 }
+
+                //This needs to be called to tell any binded element from the XAML that these properties have changed
                 OnPropertyChanged("Slots");
                 OnPropertyChanged("Inventory");
             }
         }
 
+        //Index of the selected slot
         private int _selectedSlot;
         public int SelectedSlot
         {
@@ -66,19 +77,25 @@ namespace _1030FinalProject.MVVM.ViewModel
             set
             {
                 _selectedSlot = value;
+
+                //Whenever a new slot is selected, the Slot itself is stored in SlotSelection
                 if(Inventory.Slots[value] != null)
                 {
                     SlotSelection = Inventory.Slots[value];
+
+                    //If the selection isn't null, set the list of Stats to the Item in that slot's list of Stats
                     if (Inventory.Slots[value].Item != null)
                         Stats = Inventory.Slots[value].Item.ToStrings();
                     else
                         Stats = new List<string>();
                 }
                 
+                //Tell everything this property changed
                 OnPropertyChanged("SelectedSlot");
             }
         }
 
+        //The actual slot selected
         private Slot _slotSelection;
         public Slot SlotSelection
         {
@@ -89,6 +106,8 @@ namespace _1030FinalProject.MVVM.ViewModel
                 OnPropertyChanged("SlotSelection");
             }
         }
+
+        //List of stats for the selected slot
         private List<string> _stats;
         public List<string> Stats
         {
@@ -99,6 +118,8 @@ namespace _1030FinalProject.MVVM.ViewModel
                 OnPropertyChanged("Stats");
             }
         }
+
+        //List of strings containing the name and amount in each slot
         private List<string> _slots; 
         public List<string> Slots
         {
@@ -116,13 +137,18 @@ namespace _1030FinalProject.MVVM.ViewModel
             Stats = new List<string>();
             Inventory = new Inventory(5);
             SelectedSlot = 0;
+
+            //Set button commands
             AddHandgunButton = new RelayCommand(o =>
             {
+                //Try to add item
                 if (!Inventory.AddItem(new Handgun()))
                 {
                     System.Diagnostics.Debug.WriteLine("Handgun could not be added to inventory");
                     MessageBox.Show("Handgun could not be added to inventory");
                 }
+
+                //Refresh inventory to update display
                 RefreshInventory();
             });
             AddShotgunButton = new RelayCommand(o =>
@@ -161,7 +187,6 @@ namespace _1030FinalProject.MVVM.ViewModel
                 }
                 RefreshInventory();
             });
-
             AddSwordButton = new RelayCommand(o =>
             {
                 if (!Inventory.AddItem(new Sword()))
@@ -171,7 +196,6 @@ namespace _1030FinalProject.MVVM.ViewModel
                 }
                 RefreshInventory();
             });
-
             EquipButton = new RelayCommand(o =>
             {
                 RefreshInventory();
@@ -192,6 +216,8 @@ namespace _1030FinalProject.MVVM.ViewModel
                 }
                 RefreshInventory();
             });
+
+            //When a slot in the inventory is selected (o is set to the index of the slot)
             InventoryButton = new RelayCommand(o =>
             {
                 try
@@ -217,6 +243,7 @@ namespace _1030FinalProject.MVVM.ViewModel
             });
         }
 
+        //Refresh inventory, also updates the list of names and amounts of each slot
         public void RefreshInventory()
         {
             int i = 0;
@@ -241,7 +268,7 @@ namespace _1030FinalProject.MVVM.ViewModel
             {
                 Slots[5] = "Nothing";
             }
-            SelectedSlot = SelectedSlot;
+            SelectedSlot = SelectedSlot; //This is here to update the ui
             OnPropertyChanged("Inventory");
             OnPropertyChanged("Slots");
         }

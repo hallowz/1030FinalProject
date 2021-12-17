@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace _1030FinalProject.InventorySystem.Projectiles
 {
+    //SmallBullet inherits from Projectile
     class SmallBullet : Projectile
     {
+        //Constructor for setting the direction of the bullet (not currently used)
         public SmallBullet(int x, int y)
         {
+            //Setting all the variables associated with this item
             Type = ProjectileType.Bullet;
             ProjectileDamage = 3;
             ItemName = "Small Bullet";
@@ -20,8 +23,10 @@ namespace _1030FinalProject.InventorySystem.Projectiles
             YDirection = y;
         }
         
+        //Default constructor
         public SmallBullet()
         {
+            //Setting all the variables associated with this item
             Type = ProjectileType.Bullet;
             ProjectileDamage = 3;
             ItemName = "Small Bullet";

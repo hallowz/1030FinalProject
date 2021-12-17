@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace _1030FinalProject.InventorySystem.Projectiles
 {
+    //Shell inherits from Projectile
     class Shell : Projectile
     {
         public Shell()
         {
+            //Setting all the variables associated with this item
             Type = ProjectileType.Bullet;
             ProjectileDamage = 10;
             ItemName = "Shell";

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace _1030FinalProject.InventorySystem
 {
+    //Enum to specify the type of equipment
     public enum EquipmentType { Head, Chest, Legs, Feet, Hands, Shoulders }
+
+    //Equipment inherits from item
     class Equipment : Item
     {
         private EquipmentType _type;
@@ -16,6 +19,7 @@ namespace _1030FinalProject.InventorySystem
             set { _type = value; }
         }
 
+        //Bonus to defense for this equipment
         private float _defenseBonus;
         public float DefenseBonus
         {
@@ -23,6 +27,7 @@ namespace _1030FinalProject.InventorySystem
             set { _defenseBonus = value; }
         }
 
+        //Function to get stats
         public override List<string> ToStrings()
         {
             List<string> s = new List<string>();

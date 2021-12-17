@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace _1030FinalProject.InventorySystem.Weapons
 {
+    //Melee inherits 
     class Melee : Weapon
     {
         private float  _length;

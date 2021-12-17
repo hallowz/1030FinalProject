@@ -8,6 +8,9 @@ namespace _1030FinalProject.InventorySystem
 {
     class Inventory
     {
+        //Declaring variables
+
+        //Size of the inventory
         private int _size;
         public int Size
         {
@@ -15,6 +18,7 @@ namespace _1030FinalProject.InventorySystem
             set { _size = value; }
         }
 
+        //List of slots
         private List<Slot> _slots;
         public List<Slot> Slots
         {
@@ -22,6 +26,7 @@ namespace _1030FinalProject.InventorySystem
             set { _slots = value; }
         }
 
+        //Weapon slot
         private Slot _weaponSlot;
         public Slot WeaponSlot
         {
@@ -29,18 +34,21 @@ namespace _1030FinalProject.InventorySystem
             set { _weaponSlot = value; }
         }
 
-
+        //Create inventory
         public Inventory(int Size)
         {
             this.Size = Size;
             WeaponSlot = new Slot();
             Slots = new List<Slot>();
+
+            //Populate list of slots with empty slots
             for(int i = 0; i < Size; i++)
             {
                 Slots.Add(new Slot());
             }
         }
 
+        //Add item to inventory. Sets the item of an empty slot or adds to a slot with the same item, whichever comes first.
         public bool AddItem(Item item)
         {
             foreach(Slot s in Slots)
@@ -63,6 +71,7 @@ namespace _1030FinalProject.InventorySystem
             return false;
         }
 
+        //Remove single item from selected slot. If slot amount is only 1, slot is cleared
         public void RemoveItem(int slotIndex)
         {
             Slot s = Slots[slotIndex];
@@ -78,11 +87,14 @@ namespace _1030FinalProject.InventorySystem
                 }
             }
         }
+
+        //Clear selected slot, regardless of amount
         public void RemoveAllItem(int slotIndex)
         {
             Slots[slotIndex] = new Slot();
         }
 
+        //Equip weapon to weapon slot. Returns true if successful, returns false otherwise
         public bool EquipWeapon(int slotIndex)
         {
             if (Slots[slotIndex].Item != null)
@@ -114,6 +126,7 @@ namespace _1030FinalProject.InventorySystem
             return false;
         }
 
+        //Unequip currently equipped weapon. Returns false if no room in inventory to put equipped weapon
         public bool UnEquipWeapon()
         {
             if(WeaponSlot.Item != null)

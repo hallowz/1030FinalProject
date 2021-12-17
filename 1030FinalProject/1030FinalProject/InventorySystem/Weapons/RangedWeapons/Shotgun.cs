@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace _1030FinalProject.InventorySystem.Weapons.RangedWeapons
 {
+    //Shotgun inherits from Ranged
     class Shotgun : Ranged
     {
         public Shotgun()
         {
+            //Setting all the variables associated with this item
             ItemName = "Shotgun";
             Projectile = new Projectiles.Shell();
             ProjectileSpeed = 10;

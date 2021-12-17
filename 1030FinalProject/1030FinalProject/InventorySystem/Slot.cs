@@ -8,6 +8,7 @@ namespace _1030FinalProject.InventorySystem
 {
     class Slot
     {
+        //Amount of items held in this slot
         private int _amount;
         public int Amount
         {
@@ -15,14 +16,15 @@ namespace _1030FinalProject.InventorySystem
             set { _amount = value; }
         }
 
+        //The item held in this slot
         private Item _item;
-
         public Item Item
         {
             get { return _item; }
             set { _item = value; }
         }
 
+        //When created, Item = null and Amount = 0 -> empty
         public Slot()
         {
             Amount = 0;
